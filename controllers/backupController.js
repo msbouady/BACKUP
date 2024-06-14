@@ -1,8 +1,9 @@
-const { execPromise } = require('../utils/execPromise');
-const { createBackupDir, compressBackup } = require('../backup');
-const { pgUser, pgHost, pgDatabase, pgPassword, pgPort } = require('../config');
+import { execPromise } from '../utils/execPromise.js';
+import { createBackupDir, compressBackup } from '../backup.js';
+import { pgUser, pgHost, pgDatabase, pgPassword, pgPort } from '../config.js';
+import path from 'path';
 
-const performBackup = async () => {
+export const performBackup = async () => {
   const backupDir = createBackupDir();
   const date = new Date();
   const backupFile = `backup-${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}.sql`;
@@ -16,8 +17,4 @@ const performBackup = async () => {
   } catch (error) {
     console.error('Error during backup:', error);
   }
-};
-
-module.exports = {
-  performBackup,
 };

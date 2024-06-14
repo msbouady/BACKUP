@@ -1,4 +1,4 @@
-# Node.js Backup and Scheduling Service
+# BACKUP PROJECT
 
 This Node.js project is designed to perform PostgreSQL database backups, compress the backups, and schedule these tasks to run at specified intervals using ES6 module syntax.
 
@@ -21,13 +21,13 @@ To install the project dependencies, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repository.git
-    cd your-repository
+    git clone https://github.com/msbouady/BACKUP.git
+    cd BACKUP
     ```
 
 2. Install the dependencies:
     ```sh
-    npm install
+    npm i
     ```
 
 3. Create a `.env` file in the root directory of your project and add your PostgreSQL credentials and desired port:
@@ -45,3 +45,7 @@ To install the project dependencies, follow these steps:
 To start the server and schedule the backups, run:
 ```sh
 node app.js
+```
+## Licence
+
+This project is free
